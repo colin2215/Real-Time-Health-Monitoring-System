@@ -9,7 +9,7 @@ The Real-Time Health Monitoring System is a wearable IoT device that monitors ke
 - **Alerts for Abnormal Health Perameters**
 - **Historical Data Logging**
 - **Wireless Data Logging using WiFi/Bluetooth** 
-- **Cross Platform Support**: Accesible through desktop or mobile browser
+- **Cross Platform Support**: Accessible through desktop or mobile browser
 
 ---
 
