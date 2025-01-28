@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Health Monitoring</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .metric { font-size: 2rem; margin: 20px 0; }
+    </style>
+    <script>
+        function updateMetrics() {
+            fetch("/data")
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("heartRate").innerText = "Heart Rate: " + data.heart_rate + " BPM";
+                    document.getElementById("spO2").innerText = "SpO2: " + data.spO2 + " %";
+                    document.getElementById("bodyTemp").innerText = "Body Temp: " + data.body_temp + " °C";
+                });
+        }
+        setInterval(updateMetrics, 1000);
+    </script>
+</head>
+<body>
+    <h1>Real-Time Health Monitoring System</h1>
+    <div class="metric" id="heartRate">Heart Rate: -- BPM</div>
+    <div class="metric" id="spO2">SpO2: -- %</div>
+    <div class="metric" id="bodyTemp">Body Temp: -- °C</div>
+</body>
+</html>
